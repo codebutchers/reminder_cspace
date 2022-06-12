@@ -6,6 +6,7 @@
   "scripts": {
     "server": "nodemon dist/index.js",
     "server-ts": "nodemon --exec ts-node -r src/index.ts",
+    "server-ts-solo": "nodemon --exec ts-node -r src/index_solo.ts",
     "watch": "tsc -w"
   },
   "dependencies": {
