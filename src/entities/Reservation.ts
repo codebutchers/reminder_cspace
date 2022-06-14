@@ -37,6 +37,9 @@ export class Reservation extends BaseEntity {
   @ManyToOne(() => User, (user) => user.reservations)
   user?: User;
 
+  @Column()
+  hasReviewed: boolean = false;
+
   @CreateDateColumn({ type: "timestamptz" })
   createdAt: Date;
 
