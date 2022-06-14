@@ -5,6 +5,7 @@ import NotificationHelper from "./utils/notification";
 
 export default async function task() {
   const now = new Date();
+  console.log(`>>> Task run at ${now}`);
   const tomorrow = new Date(+now + 24 * 60 * 60 * 1000);
   // Upcoming reservations
   const upcomingReservations = await Reservation.find({
