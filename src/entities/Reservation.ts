@@ -1,4 +1,4 @@
-import { PAYMENT_METHOD, RESERVATION_STATUS } from "../constants";
+import { RESERVATION_STATUS } from "../constants";
 import {
   BaseEntity,
   Column,
@@ -28,12 +28,6 @@ export class Reservation extends BaseEntity {
   })
   status: RESERVATION_STATUS;
 
-  @Column({
-    type: "enum",
-    enum: PAYMENT_METHOD,
-  })
-  paymentMethod: PAYMENT_METHOD;
-
   @Column({ type: "timestamptz" })
   fromDate!: Date;
 
@@ -42,6 +36,9 @@ export class Reservation extends BaseEntity {
 
   @ManyToOne(() => User, (user) => user.reservations)
   user?: User;
+
+  @Column()
+  hasReviewed: boolean = false;
 
   @CreateDateColumn({ type: "timestamptz" })
   createdAt: Date;

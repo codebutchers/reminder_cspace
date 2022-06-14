@@ -5,8 +5,3 @@ export enum RESERVATION_STATUS {
   Unpaid = "Unpaid",
   Canceled = "Canceled",
 }
-
-export enum PAYMENT_METHOD {
-  Cash = "Cash",
-  Paypal = "Paypal",
-}
