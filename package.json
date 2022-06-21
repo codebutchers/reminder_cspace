@@ -1,9 +1,10 @@
 {
   "name": "reminder_cspace",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "license": "MIT",
   "scripts": {
+    "start": "ts-node src/index.ts",
     "server": "nodemon dist/index.js",
     "server-ts": "nodemon --exec ts-node -r src/index.ts",
     "server-ts-solo": "nodemon --exec ts-node -r src/index_solo.ts",
