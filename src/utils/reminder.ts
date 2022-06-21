@@ -7,7 +7,7 @@ export default class Reminder {
     // Reminder._task = cron.schedule("1 * * * * *", async () => {
     // run at 1st seconds every minute
     // run every day at 9AM+7
-    Reminder._task = cron.schedule("* * 16 * * *", async () => {
+    Reminder._task = cron.schedule("1 * 2 * * *", async () => {
       await task();
     });
   };
